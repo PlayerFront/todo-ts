@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url('./assets/images/BackgroundTheme1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  transition: background-image 0.3s ease;
+}
+
+body.theme-1 {
+  background-image: url('./assets/images/BackgroundTheme1.jpg');
+}
+body.theme-2 {
+  background-image: url('./assets/images/BackgroundTheme2.jpg');
+}
+
+body.theme-3 {
+  background-image: url('./assets/images/BackgroundTheme3.jpg');
+}
+
+@font-face {
+  font-family: 'Balloo Cyrillic';
+  src: url('./assets/fonts/baloo-cyrillic.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Baloo Tamudu 2';
+  src: url('./assets/fonts/BalooTammudu2-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}

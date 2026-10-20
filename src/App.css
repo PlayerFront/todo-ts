@@ -1,0 +1,217 @@
+.todo {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 15px;
+
+}
+
+.todo__header-wrapper {
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 85px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid #FFFFFF;
+}
+
+.todo__header {
+  font-family: 'Balloo Cyrillic', sans-serif;
+  font-size: 48px;
+  /* line-height: 1; */
+  background-image: linear-gradient(0deg, #864B49, #C4564D);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 0.1px black;
+}
+
+.todo__theme {
+  background-color: transparent;
+  color: inherit;
+  height: 50px;
+  width: 50px;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+  position: fixed;
+  bottom: 30px;
+  right: 15px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 1px #FFFFFF;
+  z-index: 11111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+.todo__add {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+.todo__add-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.todo__plus {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+
+  img {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+.todo__input {
+  font-family: 'Baloo Tamudu 2', sans-serif;
+  outline: none;
+  border-radius: 85px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid #FFFFFF;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 30px;
+  color: #FFFFFF;
+  font-size: 20px;
+  width: 100%;
+
+  &::placeholder {
+    color: #FFFFFF;
+    line-height: 20px;
+  }
+}
+
+.todo__select {
+  font-family: 'Baloo Tamudu 2', sans-serif;
+  outline: none;
+  border-radius: 85px;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  font-size: 16px;
+  padding: 5px;
+  height: 40px;
+  align-self: flex-end;
+}
+
+.todo__list {
+  width: 100%;
+}
+
+.todo__items {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  gap: 15px;
+  align-items: center;
+  list-style: none;
+}
+
+.todo__item {
+  font-family: 'Baloo Tamudu 2', sans-serif;
+  outline: none;
+  border-radius: 85px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid #FFFFFF;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.todo__text {
+  font-family: 'Baloo Tamudu 2', sans-serif;
+  color: #FFFFFF;
+  font-size: 20px;
+  text-align: left;
+}
+
+.todo__text--done {
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.todo__buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo__checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex: 1;
+}
+
+.todo__checkbox-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.todo__checkbox-custom {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: inherit;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+}
+
+.todo__checkbox-input:checked+.todo__checkbox-custom {
+  background-image: url('./assets/icons/CheckMark.svg');
+  background-size: 39px 39px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.todo__remove {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+  height: 50px;
+  width: 50px;
+
+  img {
+    height: 50px;
+    width: 50px;
+  }
+}

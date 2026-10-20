@@ -1,0 +1,37 @@
+<svg viewBox="0 0 86 86" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="86.000000" height="86.000000" fill="none">
+	<defs>
+		<g id="pixso_custom_effect_1">
+			<effect visibility="visible" effectType="backgroundBlur" saturation="0" stdDeviation="32" />
+		</g>
+		<filter id="filter_1" width="86.000000" height="86.000000" x="0.000000" y="0.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_1)" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix" />
+			<feBlend result="shape" in="SourceGraphic" in2="BackgroundImageFix" mode="normal" />
+		</filter>
+		<clipPath id="outline_mask_1" transform="matrix(1,0,0,1,-0,-0)">
+			<path d="M7 13L78 13L78 74L7 74L7 13Z" fill="rgb(255,255,255)" fill-rule="nonzero" />
+		</clipPath>
+		<linearGradient id="paint_linear_1" x1="2.01933432" x2="83.7538071" y1="14.9183674" y2="17.7048836" gradientUnits="userSpaceOnUse">
+			<stop stop-color="rgb(255,255,255)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0.699999988" />
+		</linearGradient>
+		<clipPath id="clipPath_1">
+			<rect width="86.000000" height="86.000000" x="0.000000" y="0.000000" rx="43.000000" fill="rgb(255,255,255)" />
+		</clipPath>
+		<image id="image_4" width="90.000000" height="90.000000" xlink:href="data:image/png;base64,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" />
+		<pattern id="pattern_4" width="1.000000" height="1.000000" image-fill-type="fit" patternContentUnits="objectBoundingBox">
+			<use transform="matrix(0.00954617,0,0,0.0111111,0.0704225,0)" xlink:href="#image_4" />
+		</pattern>
+	</defs>
+	<g data-pixso-skip-parse="true">
+		<foreignObject width="86.000000" height="86.000000" x="0.000000" y="0.000000">
+			<div xmlns="http://www.w3.org/1999/xhtml" style="clip-path:url(#outline_mask_1);height:100%;backdrop-filter:blur(16.000000px);width:100%;-webkit-backdrop-filter:blur(16.000000px);" />
+		</foreignObject>
+	</g>
+	<g filter="url(#filter_1)">
+		<g id="Component 2" clip-path="url(#clipPath_1)" customFrame="url(#clipPath_1)">
+			<rect id="Component 2" width="86.000000" height="86.000000" x="0.000000" y="0.000000" rx="43.000000" fill="rgb(196,186,186)" fill-opacity="0.370000005" />
+			<rect id="Rainy Night" width="71.000000" height="61.000000" x="7.000000" y="13.000000" fill="url(#pattern_4)" />
+		</g>
+		<rect id="Component 2" width="85.000000" height="85.000000" x="0.500000" y="0.500000" rx="42.500000" stroke="url(#paint_linear_1)" stroke-opacity="0.699999988" stroke-width="1.000000" />
+	</g>
+</svg>

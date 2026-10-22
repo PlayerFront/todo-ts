@@ -5,28 +5,15 @@
   align-items: center;
   gap: 30px;
   padding: 30px 15px;
-
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
-.todo__header-wrapper {
-  display: inline-block;
-  padding: 10px 25px;
-  border-radius: 85px;
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid #FFFFFF;
-}
 
-.todo__header {
-  font-family: 'Balloo Cyrillic', sans-serif;
+.todo__title {
+  font-family: 'Baloo Bhaina', sans-serif;
   font-size: 48px;
-  /* line-height: 1; */
-  background-image: linear-gradient(0deg, #864B49, #C4564D);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-stroke: 0.1px black;
+  color: #FFFFFF;
 }
 
 .todo__theme {
@@ -88,7 +75,7 @@
 .todo__input {
   font-family: 'Baloo Tamudu 2', sans-serif;
   outline: none;
-  border-radius: 85px;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -106,18 +93,19 @@
   }
 }
 
+
 .todo__select {
   font-family: 'Baloo Tamudu 2', sans-serif;
   outline: none;
-  border-radius: 85px;
+  border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid #FFFFFF;
-  color: #FFFFFF;
+  color: rgb(12, 3, 81);
   font-size: 16px;
-  padding: 5px;
-  height: 40px;
+  padding: 10px;
+  height: 50px;
   align-self: flex-end;
 }
 
@@ -137,7 +125,7 @@
 .todo__item {
   font-family: 'Baloo Tamudu 2', sans-serif;
   outline: none;
-  border-radius: 85px;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -146,7 +134,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
   padding: 15px;
+  line-height: 1.5;
 }
 
 .todo__text {
@@ -154,6 +144,10 @@
   color: #FFFFFF;
   font-size: 20px;
   text-align: left;
+  line-height: 1;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  min-width: 0;
 }
 
 .todo__text--done {

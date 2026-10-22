@@ -17,6 +17,7 @@ body {
 body.theme-1 {
   background-image: url('./assets/images/BackgroundTheme1.jpg');
 }
+
 body.theme-2 {
   background-image: url('./assets/images/BackgroundTheme2.jpg');
 }
@@ -35,6 +36,13 @@ body.theme-3 {
 @font-face {
   font-family: 'Baloo Tamudu 2';
   src: url('./assets/fonts/BalooTammudu2-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Baloo Bhaina';
+  src: url('./assets//fonts/BalooBhaina-Regular.ttf');
   font-weight: 400;
   font-style: normal;
 }

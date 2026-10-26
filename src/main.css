@@ -42,7 +42,14 @@ body.theme-3 {
 
 @font-face {
   font-family: 'Baloo Bhaina';
-  src: url('./assets//fonts/BalooBhaina-Regular.ttf');
+  src: url('./assets/fonts/BalooBhaina-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Averia Libre';
+  src: url('./assets/fonts/AveriaLibre-Regular.ttf');
   font-weight: 400;
   font-style: normal;
 }

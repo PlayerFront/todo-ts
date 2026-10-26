@@ -1,18 +1,26 @@
 import './App.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocalStorage } from './hooks/useLocalStorage';
 import { filterTasks } from './utils/filterTasks';
 import type { Task, Filter, Theme } from './types/task';
 import { ThemeToggle } from './components/ThemeToggle';
 import { AddTaskForm } from './components/AddTaskForm';
 import { TaskList } from './components/TaskList';
+import { Timer } from './components/Timer';
+import timerIcon from './assets/icons/Timer.svg';
 
 const THEMES: Theme[] = ['theme-1', 'theme-2', 'theme-3']
 
 function App() {
+  const [page, setPage] = useState<'todo' | 'timer'>('todo')
   const [tasks, setTasks] = useLocalStorage<Task[]>('todo-tasks', []);
   const [filter, setFilter] = useLocalStorage<Filter>('todo-filter', 'all');
   const [theme, setTheme] = useLocalStorage<Theme>('todo-theme', 'theme-1')
+
+  useEffect(() => {
+    document.body.classList.remove(...THEMES)
+    document.body.classList.add(theme)
+  }, [theme])
 
   function handleAddTask(title: string) {
     const newTask: Task = {
@@ -43,17 +51,25 @@ function App() {
     setTheme(THEMES[nextIndex]!)
   }
 
-  useEffect(() => {
-    document.body.classList.remove(...THEMES)
-    document.body.classList.add(theme)
-  }, [theme])
-
   const filteredTasks = filterTasks(tasks, filter)
+
+  if(page === 'timer') {
+    return <Timer onBack={() => setPage('todo')} />
+  }
   return (
     <>
       <section id="todo" className='todo'>
         <header className='todo__header'>
           <h1 className='todo__title'>To-Do List</h1>
+          <button
+            className='todo__timer-link'
+            type='button'
+            onClick={() => setPage('timer')}
+          >
+            <img
+              src={timerIcon}
+            />
+          </button>
         </header>
         <ThemeToggle theme={theme} onToggle={cycleTheme} />
         <AddTaskForm

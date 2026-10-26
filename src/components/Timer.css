@@ -1,0 +1,114 @@
+.timer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 15px;
+    max-width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.timer__back {
+    background-color: transparent;
+    font-family: 'Baloo Bhaina', sans-serif;
+    color: inherit;
+    height: 50px;
+    width: 50px;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: none;
+    position: fixed;
+    bottom: 30px;
+    right: 25px;
+    z-index: 11111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+
+}
+
+.timer__back-title {
+    color: #FFFFFF;
+    font-family: 'Baloo Bhaina', sans-serif;
+    font-size: 30px;
+}
+
+.timer__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.timer__title {
+    color: #FFFFFF;
+    font-family: 'Baloo Bhaina', sans-serif;
+    font-size: 48px;
+    line-height: 1;
+}
+
+.timer__icon {
+    height: 90px;
+    width: 90px;
+    align-self: flex-end;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.timer__display {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid #FFFFFF;
+    width: 100%;
+    padding: 15px;
+    height: 150px;
+}
+
+.timer__clock {
+    color: #FFFFFF;
+    font-family: 'Averia Libre', sans-serif;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer__controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.timer__btn {
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}

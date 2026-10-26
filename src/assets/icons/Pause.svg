@@ -1,0 +1,15 @@
+<svg viewBox="0 0 77 57" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="77.000000" height="57.000000" fill="none" customFrame="#000000">
+	<defs>
+		<image id="image_6" width="90.000000" height="90.000000" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAABHNCSVQICAgIfAhkiAAAATBJREFUeJzt1zFKA1EUheH/2ghRdBGSgC7ATVik114rC7ejhVikdxtaB0EZsoeIBmx8FmMl4txhMCbj/9VnHoc7t3gPJEmSJEmSJEmSJEmSJEmSJEmSJElaOdEmXErZAs6AY2AI7PxGqRU2BypgAlxGxGv2w/SgSykj4BbYb12vnx6AcURUmXBq0KWUbeAeh/zVE3AYEfOm4EbywAsc8ndGwHkmmN3oCtjr0qjHqogYNoUaB11K2QQW5Lf/v3kHBhHx9lPI4S1J46A//9RsCV3W1axpmyG/0Tcdy/TZdSbU5np3Bxx0adRDj9TXu+emYGqjI+IFGFNf0lWbAkeZIUP7J/gAOAVOqJ/gu63rrbc59SNlAlxFxOKP+0iSJEmSJEmSJEmSJEmSJEmSJEmS1MUH0fY3Y0jBdgkAAAAASUVORK5CYII=" />
+		<pattern id="pattern_6" width="1.000000" height="1.000000" image-fill-type="stretch" patternContentUnits="objectBoundingBox">
+			<use transform="matrix(0.0111111,-1.86645e-26,-8.53385e-27,0.00901771,-1.65781e-26,0.0175181)" xlink:href="#image_6" />
+		</pattern>
+		<pattern id="pattern_7" width="1.000000" height="1.000000" image-fill-type="fit" patternContentUnits="objectBoundingBox">
+			<use transform="matrix(0.0111111,0,0,0.0105384,0,0.0257711)" xlink:href="#image_6" />
+		</pattern>
+	</defs>
+	<g id="Group 1">
+		<rect id="Subtract" width="57.000004" height="64.792686" x="0.000000" y="0.000000" fill="url(#pattern_6)" transform="matrix(6.69704e-17,-1,1,5.59859e-17,0,57)" />
+		<rect id="Subtract" width="57.000004" height="60.097561" x="0.000000" y="0.000000" fill="url(#pattern_7)" transform="matrix(6.47704e-17,-1,1,5.78875e-17,16.9023,57)" />
+	</g>
+</svg>

@@ -1,5 +1,5 @@
 import './Timer.css';
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import playIcon from '../assets/icons/Play.svg';
 import pauseIcon from '../assets/icons/Pause.svg';
 import resetIcon from '../assets/icons/Reset.svg';
@@ -19,6 +19,8 @@ interface TimerProps {
 export function Timer({ onBack }: TimerProps) {
     const [seconds, setSeconds] = useState(0)
     const [isRunning, setIsRunning] = useState(false)
+    const [isMusicPlaying, setIsMusicPlaying] = useState(false)
+    const audioRef = useRef<HTMLAudioElement>(null)
 
     useEffect(() => {
         if (!isRunning) return
@@ -38,6 +40,20 @@ export function Timer({ onBack }: TimerProps) {
         setIsRunning(false)
     }
 
+    useEffect(() => {
+        const audio = audioRef.current
+        if (!audio) return
+
+        if (isMusicPlaying) {
+            audio.play().catch((error) => {
+                console.error('Не удалось воспроизвести музыку', error)
+                setIsMusicPlaying(false)
+            })
+        } else {
+            audio.pause()
+        }
+    }, [isMusicPlaying])
+
     const minutes = Math.floor(seconds / 60)
     const remainingSeconds = seconds % 60
 
@@ -48,11 +64,18 @@ export function Timer({ onBack }: TimerProps) {
             </button>
             <header className='timer__header'>
                 <h1 className="timer__title">POMODORO</h1>
-                <img
-                    src={trebleClefIcon}
-                    className='timer__icon'
-                    alt=''
-                />
+                <audio ref={audioRef} src='/sounds/birds.mp3' />
+                <button
+                    className='timer__music'
+                    type='button'
+                    onClick={() => setIsMusicPlaying((prev) => !prev)}
+                >
+                    <img
+                        src={trebleClefIcon}
+                        className='timer__icon'
+                        alt=''
+                    />
+                </button>
             </header>
             <div className='timer__display'>
                 <div className='timer__clock'>
@@ -77,7 +100,7 @@ export function Timer({ onBack }: TimerProps) {
                         type='button'
                         onClick={resetTimer}
                     >
-                        <img src={resetIcon} alt='reset timer'/>
+                        <img src={resetIcon} alt='reset timer' />
                     </button>
                 </div>
             </div>

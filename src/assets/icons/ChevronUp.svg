@@ -1,0 +1,9 @@
+<svg viewBox="0 0 40 26" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40.000000" height="26.000000" fill="none" customFrame="#000000">
+	<defs>
+		<image id="image_1" width="90.000000" height="90.000000" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAABHNCSVQICAgIfAhkiAAAAm5JREFUeJzt2i9vFEEcxvESSqEVJFggOAx9A62pxqHB8OcN8BYQFQTCoXE0aZNqUH0JDQIHog5Rwv8EQSqAL2JXNKV3tzvzzOzM3fNJzt7v95vs7sxztwsLZmZmZmZmZmZmZmZmZmZmZmZmNk+AJWAE/Gg/z4HlofvKDVhuZ//ersMIWFIWGPG/N8BVWZHCAVfamU96pizy9ZQCAB+BdVmhQgFrwOGYNfiiLDTJEfBAVqwwwG3g16QFUBbr4gVwTlZ0YMBZ4HGXwZVFu9oDLskKDwS4CLzqOrSycB8HwKqseGbAdeBdn4GVxfv6CdySNZAJcJPm2NaLsoEQf4FHwBlZIwkBD4HfIYMqm/gQuNgAOxQcbmhCyE7EfN+UzWxGNAKFhhvGh5A+NpUNLQLbkQ0dUlC4YXII6WobWEzRXPBzrFVEuAHuMCWETJF+/yFwZz5hkHBDjxAyQb4TFc1Z831kw1nDDU0IeR3Z8wFwI1fP6saThxsCQsgphku9VHAronvU6Te9gGGK3FzQbN73lT1FQ3Nc2gVWBL2cB15G9vIZ2FCsjRxwGdiPHPAtcK3mHrIALgBbkYMGXU0UdFdlQ+ZwQ6H7RBZkCDdUcPLJgoThhlpDSCrCBVk99p3VpdMsEN7izFIISQW4R7PRhfrTfkIdAXeHXocs0BzDQpQbQlJBEyz6KD+EpIIm3HRRVwhJhfhwM069ISQVNCeJ4+oPIamgORvDLIWQVIgPN7MXQlIhPNzMdghJhe6/yJX3T0htmB5u5i+EpML4cDO/ISQVmpcRn7ZX8CfgCQW/PGlmZmZmZmZmZmZmZmZmZmZmdfgHxR19cfn8V0UAAAAASUVORK5CYII=" />
+		<pattern id="pattern_1" width="1.000000" height="1.000000" image-fill-type="fit" patternContentUnits="objectBoundingBox">
+			<use transform="matrix(0.00722222,0,0,0.0111111,0.175,0)" xlink:href="#image_1" />
+		</pattern>
+	</defs>
+	<rect id="Chevron Down" width="40.000000" height="26.000000" x="0.000000" y="0.000000" fill="url(#pattern_1)" transform="matrix(-1,1.22465e-16,-1.22465e-16,-1,40,26)" />
+</svg>

@@ -1,12 +1,19 @@
-import { useState } from "react";
-import type { Filter } from '../types/task';
-import plusIcon from '../assets/icons/Plus.svg';
+import { useState } from "react"
+import type { Filter } from '../types/task'
+import { CustomSelect } from "./CustomSelect"
+import plusIcon from '../assets/icons/Plus.svg'
 
 interface AddTaskFormProps {
     onAdd: (title: string) => void
     filter: Filter
     onFilterChange: (filter: Filter) => void
 }
+
+const filterOptions: { value: Filter; label: string }[] = [
+    { value: 'all', label: 'ALL' },
+    { value: 'completed', label: 'COMPLETED' },
+    { value: 'incomplete', label: 'INCOMPLETE' },
+]
 
 export function AddTaskForm({ onAdd, filter, onFilterChange }: AddTaskFormProps) {
     const [inputValue, setInputValue] = useState('');
@@ -37,15 +44,11 @@ export function AddTaskForm({ onAdd, filter, onFilterChange }: AddTaskFormProps)
                     <img src={plusIcon} alt='add' />
                 </button>
             </div>
-            <select
-                className='todo__select'
+            <CustomSelect
                 value={filter}
-                onChange={(e) => onFilterChange(e.target.value as Filter)}
-            >
-                <option value='all' className='todo__select-value'>All</option>
-                <option value='completed'>Completed</option>
-                <option value='incomplete'>Incomplete</option>
-            </select>
+                onChange={onFilterChange}
+                options={filterOptions}
+            />
         </div>
     )
 }

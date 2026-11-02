@@ -1,3 +1,9 @@
+:root {
+  --surface-bg: rgba(0, 0, 0, 0.4);
+  --surface-border: rgba(255, 255, 255, 0.6);
+  --surface-blur: blur(15px);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +20,14 @@ body {
   transition: background-image 0.3s ease;
 }
 
+button {
+  transition: transform 0.1s ease;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
 body.theme-1 {
   background-image: url('./assets/images/BackgroundTheme1.jpg');
 }
@@ -26,6 +40,26 @@ body.theme-3 {
   background-image: url('./assets/images/BackgroundTheme3.jpg');
 }
 
+
+body.theme-1 {
+  --surface-bg: rgba(32, 60, 63, 0.4);
+  --surface-border: rgba(151, 154, 163, 0.6);
+  --surface-blur: blur(10px);
+}
+
+body.theme-2 {
+  --surface-bg: rgba(0, 25, 47, 0.4);
+  --surface-border: rgba(33, 68, 124, 0.6);
+  --surface-blur: blur(10px);
+}
+
+body.theme-3 {
+  --surface-bg: rgba(29, 62, 77, 0.4);
+  --surface-border: rgba(158, 167, 200, 0.6);
+  --surface-blur: blur(10px);
+}
+
+
 @font-face {
   font-family: 'Balloo Cyrillic';
   src: url('./assets/fonts/baloo-cyrillic.ttf');
@@ -37,6 +71,13 @@ body.theme-3 {
   font-family: 'Baloo Tamudu 2';
   src: url('./assets/fonts/BalooTammudu2-Regular.ttf');
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Baloo Tamudu 2';
+  src: url('./assets/fonts/BalooTammudu2-Medium.ttf');
+  font-weight: 500;
   font-style: normal;
 }
 

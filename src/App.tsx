@@ -13,9 +13,10 @@ const THEMES: Theme[] = ['theme-1', 'theme-2', 'theme-3']
 
 function App() {
   const [page, setPage] = useState<'todo' | 'timer'>('todo')
-  const [tasks, setTasks] = useLocalStorage<Task[]>('todo-tasks', []);
-  const [filter, setFilter] = useLocalStorage<Filter>('todo-filter', 'all');
+  const [tasks, setTasks] = useLocalStorage<Task[]>('todo-tasks', [])
+  const [filter, setFilter] = useLocalStorage<Filter>('todo-filter', 'all')
   const [theme, setTheme] = useLocalStorage<Theme>('todo-theme', 'theme-1')
+
 
   useEffect(() => {
     document.body.classList.remove(...THEMES)

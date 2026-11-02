@@ -9,12 +9,31 @@
   position: relative;
 }
 
+@media (min-width: 768px) {
+  .todo {
+    padding-left: max(15px, calc((100vw - 600px) / 2));
+    padding-right: max(15px, calc((100vw - 600px) / 2));
+  }
+}
+
 .todo__header {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   gap: 20px;
   padding: 20px;
+  backdrop-filter: var(--surface-blur);
+  background: var(--surface-bg);
+  -webkit-backdrop-filter: var(--surface-blur);
+  border: 1px solid var(--surface-border);
+  border-radius: 85px;
+  min-height: 115px;
+  width: 100%;
+
+
+  @media (min-width: 768px) {
+    gap: 40px;
+  }
 }
 
 .todo__timer-link {
@@ -28,17 +47,26 @@
   cursor: pointer;
   outline: none;
   border-radius: 50%;
-  box-shadow: 0 0 20px 1px #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: visible;
-  
+
+  @media (min-width: 768px) {
+    height: 70px;
+    width: 70px;
+  }
+
 
   img {
     width: 70px;
-    height:70px;
+    height: 70px;
     display: block;
+
+    @media (min-width: 768px) {
+      height: 100px;
+      width: 100px;
+    }
   }
 }
 
@@ -47,6 +75,10 @@
   line-height: 1;
   font-size: 48px;
   color: #FFFFFF;
+
+  @media (min-width: 768px) {
+    font-size: 64px;
+  }
 }
 
 .todo__theme {
@@ -63,12 +95,18 @@
   bottom: 30px;
   right: 15px;
   border-radius: 50%;
-  box-shadow: 0 0 20px 1px #FFFFFF;
   z-index: 11111;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: visible;
+
+  @media (min-width: 768px) {
+    height: 80px;
+    width: 80px;
+    bottom: 40px;
+    right: 40px;
+  }
 
   img {
     width: 100%;
@@ -102,44 +140,103 @@
   img {
     height: 50px;
     width: 50px;
+
+    @media (min-width: 768px) {
+      height: 70px;
+      width: 70px;
+    }
   }
 }
 
 .todo__input {
   font-family: 'Baloo Tamudu 2', sans-serif;
+  font-weight: 500;
   outline: none;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid #FFFFFF;
-  height: 50px;
+  border-radius: 30px;
+  backdrop-filter: var(--surface-blur);
+  background: var(--surface-bg);
+  -webkit-backdrop-filter: var(--surface-blur);
+  border: 1px solid var(--surface-border);
   box-sizing: border-box;
-  padding: 30px;
+  padding: 10px 15px;
   color: #FFFFFF;
   font-size: 20px;
   width: 100%;
 
+  @media (min-width: 768px) {
+    font-size: 26px;
+  }
+
   &::placeholder {
     color: #FFFFFF;
-    line-height: 20px;
   }
 }
 
+.custom-select {
+  position: relative;
+  width: 100%;
+  max-width: 200px;
+  font-family: 'Baloo Bhaina', sans-serif;
+  align-self: flex-end;
+  font-weight: 500;
+  font-size: 16px;
 
-.todo__select {
-  font-family: 'Baloo Tamudu 2', sans-serif;
+  @media (min-width: 768px) {
+    max-width: 300px;
+    font-size: 20px;
+  }
+}
+
+.custom-select__trigger {
   outline: none;
-  border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.3);
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 30px;
+  backdrop-filter: var(--surface-blur);
+  background: var(--surface-bg);
+  -webkit-backdrop-filter: var(--surface-blur);
+  border: 1px solid var(--surface-border);
+  color: #FFFFFF;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: inherit;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+.custom-select__icon {
+  width: 25px;
+  height: 100%;
+}
+
+.custom-select__options {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  right: 0;
+  padding: 10px 10px;
+  margin: 0;
+  list-style: none;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid #FFFFFF;
-  color: rgb(12, 3, 81);
-  font-size: 16px;
-  padding: 10px;
-  height: 50px;
-  align-self: flex-end;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1111;
+  transition: all 0.5s ease-out;
+}
+
+.custom-select__option {
+  color: #FFFFFF;
+  padding: 10px 15px;
+  cursor: pointer;
 }
 
 .todo__list {
@@ -149,7 +246,7 @@
 .todo__items {
   display: flex;
   flex-direction: column;
-  max-width: 400px;
+  /* max-width: 400px; */
   gap: 15px;
   align-items: center;
   list-style: none;
@@ -158,11 +255,11 @@
 .todo__item {
   font-family: 'Baloo Tamudu 2', sans-serif;
   outline: none;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid #FFFFFF;
+  border-radius: 30px;
+  backdrop-filter: var(--surface-blur);
+  background: var(--surface-bg);
+  -webkit-backdrop-filter: var(--surface-blur);
+  border: 1px solid var(--surface-border);
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -175,12 +272,17 @@
 .todo__text {
   font-family: 'Baloo Tamudu 2', sans-serif;
   color: #FFFFFF;
+  font-weight: 500;
   font-size: 20px;
   text-align: left;
   line-height: 1;
   overflow-wrap: break-word;
   word-break: break-word;
   min-width: 0;
+
+  @media (min-width: 768px) {
+    font-size: 26px;
+  }
 }
 
 .todo__text--done {

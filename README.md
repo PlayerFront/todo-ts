@@ -1,75 +1,84 @@
-# React + TypeScript + Vite
+# To-Do List with Pomodoro Timer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A task management app with a built-in Pomodoro timer and three theme options. Works as a web app and as an Android APK.
 
-Currently, two official plugins are available:
+## Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<img src="./screenshots/screenshotToDo.png" alt="To-Do List main screen" width="600" />
+<img src="./screenshots/screenshotPomodoro.png" alt="Timer main screen" width="600" />
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- ✅ Add, delete, and mark tasks as completed
+- 🔍 Filter tasks: all / completed / incomplete
+- 💾 Automatic saving of tasks to `localStorage`
+- 🎨 Three theme options with smooth switching
+- ⏱️ Built-in Pomodoro timer
+- 📱 Responsive design (mobile, tablet)
+- 📦 Android APK build via Capacitor
 
-## Expanding the ESLint configuration
+## Design from Figma Community
+- **Design:** [Navya Durga](https://www.figma.com/@lifeneedfantasy)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+| Technology | Purpose |
+|---|---|
+| **React 19** | UI library |
+| **TypeScript** | Type safety |
+| **Vite** | Build tool and dev server |
+| **CSS** | Styling |
+| **Vitest + RTL** | Testing |
+| **Capacitor** | Android APK build |
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Project Structure
+src/
+├── components/ # React components
+│ ├── AddTaskForm.tsx
+│ ├── CustomSelect.tsx
+│ ├── TaskItem.tsx
+│ ├── TaskList.tsx
+│ ├── ThemeToggle.tsx
+│ └── Timer.tsx
+├── hooks/ # Custom hooks
+│ └── useLocalStorage.ts
+├── types/ # TypeScript types
+│ └── task.ts
+├── utils/ # Utility functions
+│ └── filterTasks.ts
+├── assets/ # Icons, fonts, images
+├── App.tsx # Root component
+└── main.tsx # Entry point
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Tests
 
-```
+The project is covered with tests (Vitest + React Testing Library):
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+```bash
+npm run test      
+npm run test:run    
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Getting Started
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Install dependencies
+npm install
 
-```
+# Dev server
+npm run dev
+
+# Build
+npm run build
+
+# Tests
+npm run test
+
+# Android APK build
+npm run build
+npx cap sync
+cd android
+./gradlew assembleDebug
+
+Android APK
+The APK is built with Capacitor. The ready file is located at:
+
+android/app/build/outputs/apk/debug/app-debug.apk

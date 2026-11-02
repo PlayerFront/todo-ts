@@ -3,19 +3,21 @@
 A task management app with a built-in Pomodoro timer and three theme options. Works as a web app and as an Android APK.
 
 ## Demo
+- **Android APK:** [https://github.com/PlayerFront/todo-ts/releases/tag/v1.0.0]
 
-<img src="./screenshots/screenshotToDo.png" alt="To-Do List main screen" width="600" />
-<img src="./screenshots/screenshotPomodoro.png" alt="Timer main screen" width="600" />
+## Screenshots
+<img src="./screenshots/screenshotToDo.png" alt="To-Do List main screen" width="300" />
+<img src="./screenshots/screenshotPomodoro.png" alt="Timer main screen" width="300" />
 
 ## Features
 
-- ✅ Add, delete, and mark tasks as completed
-- 🔍 Filter tasks: all / completed / incomplete
-- 💾 Automatic saving of tasks to `localStorage`
-- 🎨 Three theme options with smooth switching
-- ⏱️ Built-in Pomodoro timer
-- 📱 Responsive design (mobile, tablet)
-- 📦 Android APK build via Capacitor
+- Add, delete, and mark tasks as completed
+- Filter tasks: all / completed / incomplete
+- Automatic saving of tasks to `localStorage`
+- Three theme options with smooth switching
+- Built-in Pomodoro timer
+- Responsive design (mobile, tablet)
+- Android APK build via Capacitor
 
 ## Design from Figma Community
 - **Design:** [Navya Durga](https://www.figma.com/@lifeneedfantasy)

@@ -6,8 +6,7 @@ A task management app with a built-in Pomodoro timer and three theme options. Wo
 - **Android APK:** [Release] (https://github.com/PlayerFront/todo-ts/releases/tag/v1.0.0)
 
 ## Screenshots
-<img src="./screenshots/screenshotToDo.png" alt="To-Do List main screen" width="300" />
-<img src="./screenshots/screenshotPomodoro.png" alt="Timer main screen" width="300" />
+<img src="./screenshots/screenshotToDo.png" alt="To-Do List main screen" width="300" /> <img src="./screenshots/screenshotPomodoro.png" alt="Timer main screen" width="300" />
 
 ## Features
 
